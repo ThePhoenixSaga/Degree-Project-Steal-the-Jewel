@@ -1,0 +1,4 @@
+Record own voice for patrol, chase and attack dialogue.
+•	Patrol - “De-de-dum”
+•	Chase – “Hey you, stop!” 
+•	Attack – “You leave me no choice!”
