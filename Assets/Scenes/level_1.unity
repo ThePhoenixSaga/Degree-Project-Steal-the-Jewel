@@ -6732,7 +6732,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4220092541978606, guid: 223fb33db976d234b83d3fdea393125d, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4220092541978606, guid: 223fb33db976d234b83d3fdea393125d, type: 2}
       propertyPath: m_LocalRotation.z
@@ -6740,7 +6740,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4220092541978606, guid: 223fb33db976d234b83d3fdea393125d, type: 2}
       propertyPath: m_LocalRotation.w
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4220092541978606, guid: 223fb33db976d234b83d3fdea393125d, type: 2}
       propertyPath: m_RootOrder
@@ -6816,7 +6816,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4057062760355194, guid: 223fb33db976d234b83d3fdea393125d, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0.117
+      value: 0.357
       objectReference: {fileID: 0}
     - target: {fileID: 135518565187243326, guid: 223fb33db976d234b83d3fdea393125d,
         type: 2}
@@ -6831,7 +6831,7 @@ Prefab:
     - target: {fileID: 114037899856720214, guid: 223fb33db976d234b83d3fdea393125d,
         type: 2}
       propertyPath: FieldOfView
-      value: 90
+      value: 110
       objectReference: {fileID: 0}
     - target: {fileID: 114037899856720214, guid: 223fb33db976d234b83d3fdea393125d,
         type: 2}
@@ -6845,7 +6845,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4220092541978606, guid: 223fb33db976d234b83d3fdea393125d, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4057062760355194, guid: 223fb33db976d234b83d3fdea393125d, type: 2}
       propertyPath: m_LocalRotation.w
@@ -8415,6 +8415,26 @@ Prefab:
         type: 2}
       propertyPath: bullet
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114037899856720214, guid: 223fb33db976d234b83d3fdea393125d,
+        type: 2}
+      propertyPath: viewAngle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114037899856720214, guid: 223fb33db976d234b83d3fdea393125d,
+        type: 2}
+      propertyPath: viewRadius
+      value: 2.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 114037899856720214, guid: 223fb33db976d234b83d3fdea393125d,
+        type: 2}
+      propertyPath: targetMask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 114037899856720214, guid: 223fb33db976d234b83d3fdea393125d,
+        type: 2}
+      propertyPath: obstacleMask.m_Bits
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 223fb33db976d234b83d3fdea393125d, type: 2}

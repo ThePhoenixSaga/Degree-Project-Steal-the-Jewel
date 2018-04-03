@@ -17,6 +17,7 @@ public class NPC_FSM_Controller : StateMachineBehaviour {
     public float rotSpeed = 1.0f;
     public float accuracy = 3.0f;
     public LineOfSight ThisLineOfSight;
+    public Vector3 LastKnowSighting;
 
     public GameObject objective;
 
@@ -36,6 +37,7 @@ public class NPC_FSM_Controller : StateMachineBehaviour {
         bullet = NPC.GetComponent<EnemyConstructor>().GetBullet();
         agent = NPC.GetComponent<NavMeshAgent>();
         ThisLineOfSight = NPC.GetComponent<LineOfSight>();
+        LastKnowSighting = NPC.GetComponent<LineOfSight>().GetLastKnowSighting();
 
         objective = NPC.GetComponent<EnemyConstructor>().GetObjective();
 

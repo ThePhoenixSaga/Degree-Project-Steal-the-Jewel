@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class State_Chase : NPC_FSM_Controller {
 
-    public Vector3 oldPlayerPosition;
+    //public Vector3 oldPlayerPosition;
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         base.OnStateEnter(animator, stateInfo, layerIndex);
-        oldPlayerPosition = player.transform.position;
+        //oldPlayerPosition = player.transform.position;
         audioSource.PlayOneShot(soundChase);
     }
 
@@ -29,11 +29,12 @@ public class State_Chase : NPC_FSM_Controller {
 
         agent.SetDestination(player.transform.position);
 
-        if (oldPlayerPosition == player.transform.position)
+        if (LastKnowSighting != player.transform.position) //Go to players last known position
         {
+            agent.SetDestination(LastKnowSighting);
             //Debug.Log("Player is out of view");
         }
-        //Debug.Log(oldPlayerPosition.ToString("F4"));
+        //Debug.Log(LastKnowSighting.ToString("F4"));
     }
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state

@@ -14,7 +14,7 @@ public class LineOfSight : MonoBehaviour
     public bool CanSeeTarget = false;
 
     //FOV
-    public float FieldOfView = 90f;
+    public float FieldOfView = 110f;
 
     //reference to target
     public Transform Player = null;
@@ -35,6 +35,11 @@ public class LineOfSight : MonoBehaviour
     public Vector3 currentPlayerPosition;
 
     public bool playerNearby = false;
+
+    public Vector3 GetLastKnowSighting()
+    {
+        return LastKnowSighting;
+    }
 
     private void Awake()
     {
@@ -89,13 +94,13 @@ public class LineOfSight : MonoBehaviour
         {
             //playerNearby = true;
             TrackingPlayer();
-            //Debug.Log("Current position does not equal to last player position");
+            //Debug.Log("Current position does not equal to last known player position");
 
         }
         else
         {
             playerNearby = false;
-            currentPlayerPosition = Vector3.zero;
+            //currentPlayerPosition = Vector3.zero;
         }
         //Debug.Log("Raycast no longer hitting player");
         return false;
@@ -114,6 +119,7 @@ public class LineOfSight : MonoBehaviour
 
     void TrackingPlayer()
     {
+        LastKnowSighting = currentPlayerPosition;
         //Debug.Log("I'm searching for you!");
     }
 
