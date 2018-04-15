@@ -117,7 +117,7 @@ public class EnemyConstructor : MonoBehaviour
     }
 
     // Debugging code to display a drawn line from the AI to whatever waypoint the AI is targeting.
-    /*void OnDrawGizmosSelected()
+    void OnDrawGizmosSelected()
     {
 
         var nav = GetComponent<NavMeshAgent>();
@@ -142,5 +142,5 @@ public class EnemyConstructor : MonoBehaviour
             line.SetPosition(i, path.corners[i]);
         }
 
-    }*/
+    }
 }
