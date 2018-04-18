@@ -3021,7 +3021,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 227403997}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -289.04, y: -276.04, z: 0}
+  m_LocalPosition: {x: -289.04, y: -206.54001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 759809547}
@@ -5795,7 +5795,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 419969450}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 187.85999, y: 274.23004, z: 0}
+  m_LocalPosition: {x: 187.85999, y: 204.73004, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2009790558}
@@ -7335,6 +7335,20 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1488074865020064, guid: 223fb33db976d234b83d3fdea393125d, type: 2}
       propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1021121139420086, guid: 223fb33db976d234b83d3fdea393125d, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 82366486450563840, guid: 223fb33db976d234b83d3fdea393125d,
+        type: 2}
+      propertyPath: rolloffMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82366486450563840, guid: 223fb33db976d234b83d3fdea393125d,
+        type: 2}
+      propertyPath: DopplerLevel
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -19078,7 +19092,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a13310dce26c82a438e02d3badc2dbae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerLives: 0
+  enemy: {fileID: 0}
+  player: {fileID: 0}
+  orgEnemyTrans: {x: 0, y: 0, z: 0}
+  orgPlayerTrans: {x: 0, y: 0, z: 0}
+  playerLives: 3
   outOfLives: 0
   playerLivesUI: {fileID: 0}
   playerLivesText: {fileID: 0}
@@ -19107,8 +19125,6 @@ MonoBehaviour:
   CollectedSmallGem: 0
   CollectedMainGem: 0
   gotObjective: 0
-  smallGem: {fileID: 0}
-  mainGem: {fileID: 0}
   soundCollectSmallGem: {fileID: 0}
   soundCollectMainGem: {fileID: 0}
   numberOfSmallGemsCol: 0
@@ -21306,7 +21322,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1245972375}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -239.40002, y: 265.7, z: 0}
+  m_LocalPosition: {x: -239.40002, y: 196.20001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 961926294}
@@ -22051,7 +22067,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1270611728}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 188.4, y: 193.3, z: 0}
+  m_LocalPosition: {x: 188.4, y: 123.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2017926482}
@@ -26288,7 +26304,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1578312368}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 354.26, y: 316.77, z: 43.74}
+  m_LocalPosition: {x: 354.26, y: 247.27, z: 43.74}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1245972376}

@@ -12,6 +12,7 @@ TagManager:
   - SmallGem
   - Bullet
   - startingArea
+  - Enemy
   layers:
   - Default
   - TransparentFX

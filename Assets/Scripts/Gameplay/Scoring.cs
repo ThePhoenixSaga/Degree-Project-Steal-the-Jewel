@@ -14,10 +14,9 @@ public class Scoring : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        score = 0; ///Defualt value starting at 0
         scoreUI = GameObject.Find("Score"); //Gets score UI object
         scoreText = scoreUI.GetComponent<Text>(); //Gets Text proerpty from score UI object
-
+        score = PlayerPrefs.GetInt("Player Score");
         collecting = GetComponent<Collecting>(); //Gets Collecting script for referencing its variables and functions
     }
 
@@ -28,7 +27,6 @@ public class Scoring : MonoBehaviour {
         if(collecting.GetComponent<Collecting>().CollectedSmallGem == true) //        
         {
             score = score + 100; //Add to score
-            scoreText.text = score.ToString(); //Writes to score UI text 
             collecting.GetComponent<Collecting>().CollectedSmallGem = false; //Resets to false to prevent looping from adding score
         }
 
@@ -36,8 +34,8 @@ public class Scoring : MonoBehaviour {
         if (collecting.GetComponent<Collecting>().CollectedMainGem == true)
         {
             score = score + 1000; //Add to score
-            scoreText.text = score.ToString(); //Writes to score UI text 
             collecting.GetComponent<Collecting>().CollectedMainGem = false;//Resets to false to prevent looping from adding score 
         }
+        scoreText.text = score.ToString(); //Writes to score UI text 
     }
 }

@@ -6,7 +6,14 @@ using UnityEngine;
 
 public class PlayerLives : MonoBehaviour {
 
-    public int playerLives; //How many lives the player will have
+    //For getting original transform values for level reset
+    public GameObject enemy; //For referencing enmey object
+    public GameObject player; //For referencing player object
+
+    public Vector3 orgEnemyTrans; //inital starting position
+    public Vector3 orgPlayerTrans; //Intial starting position
+
+    public int playerLives = 3; //Pulls playerLives from static class
     public bool outOfLives; //Has the player ran out of lives?
 
     public GameObject playerLivesUI; //Player live's UI object
@@ -14,15 +21,22 @@ public class PlayerLives : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+
+        enemy = GameObject.FindGameObjectWithTag("Enemy"); //Get enemy object
+        player = GameObject.FindGameObjectWithTag("Player"); //Get player object
+
+        orgEnemyTrans = enemy.GetComponent<Transform>().position; //Get starting position
+        orgPlayerTrans = player.GetComponent<Transform>().position; //Get starting position
+
         outOfLives = false; //Default value
 
         playerLivesUI = GameObject.Find("LivesText"); //Gets player lives UI object
         playerLivesText = playerLivesUI.GetComponent<Text>(); //Gets Text property from player's lives UI object
-        playerLives = 3; //Defualt number of player lives to start on each scene load
     }
 	
 	// Update is called once per frame
 	void Update () {
+
         //If player has ran out of lives
         if (playerLives <= 0)
         {
@@ -39,11 +53,11 @@ public class PlayerLives : MonoBehaviour {
         //If bullet hits player, reset level and deduct 1 from player live's pool
         if (bullet.gameObject.tag == "Bullet")
         {
-            playerLives = playerLives--; //Deducts player lives by 1
-            //Reloads level 1 scene
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            //SceneManager.LoadScene("Scenes/level_1", LoadSceneMode.Single);
+            playerLives = playerLives - 1; //Deducts player lives by 1
 
+            //Reset player's and AI's position
+            enemy.transform.position = orgEnemyTrans; //Set current position to original position
+            player.transform.position = orgPlayerTrans; //Set current position to original position
         }
     }
 }
